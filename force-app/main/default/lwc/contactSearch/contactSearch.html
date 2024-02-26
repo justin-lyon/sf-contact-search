@@ -1,0 +1,22 @@
+<template>
+  <section class="slds-box slds-theme_default">
+    <!-- layout this section so that the input and the button are side by side -->
+    <lightning-input lwc:ref="input" variant="label-hidden" placeholder="Enter a name..."></lightning-input>
+    <lightning-button label="Search" variant="brand"></lightning-button>
+  </section>
+
+  <!-- do not display any results sections on page load -->
+  <!-- display this section when you have results -->
+  <section class="slds-box slds-theme_default slds-m-top_small">
+    <ul>
+      <template for:each={searchResults} for:item="contact">
+        <li key={contact.Id}>{contact.Name}, {contact.Title}</li>
+      </template>
+    </ul>
+  </section>
+
+  <!-- display this section when results are empty -->
+  <section class="slds-box slds-theme_default slds-m-top_small">
+    No contacts found.
+  </section>
+</template>

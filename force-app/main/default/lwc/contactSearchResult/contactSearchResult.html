@@ -1,0 +1,25 @@
+<!-- use slds classes to style this component -->
+<template>
+  <lightning-card>
+    <h2 slot="title">{name}</h2>
+    <lightning-button-icon slot="actions" icon-name="action:add_contact" ></lightning-button-icon>
+
+    <!-- add small horizontal padding to this div -->
+    <div >
+      <!-- layout these two display fields so that they are
+        next to each other, horizontally inside the card -->
+      <div >
+        <label for="phone">Phone</label>
+        <span>{phone}</span>
+      </div>
+      <div >
+        <label for="email">Email</label>
+        <span>{email}</span>
+      </div>
+    </div>
+
+    <div slot="footer">
+      <!-- Add the Contact's Account to the Footer -->
+    </div>
+  </lightning-card>
+</template>
